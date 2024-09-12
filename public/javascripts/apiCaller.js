@@ -88,6 +88,6 @@ export class APICaller {
         }
       });
 
-    $('main').empty();
+    // $('main').empty();
   }
 }

@@ -3,14 +3,14 @@
     "full_name": "Rowan Ivor",
     "phone_number": "123 123 1234",
     "email": "r_ivor@gmail.com",
-    "tags": "Work,Friends,Me",
+    "tags": "Work,Friends",
     "id": 1
   },
   {
     "full_name": "Pete Hanson",
     "phone_number": "123 456 7890",
     "email": "phanson@ls.com",
-    "tags": "Work",
+    "tags": "Work,Friends,Me",
     "id": 2
   }
 ]
