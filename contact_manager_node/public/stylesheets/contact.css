@@ -1,0 +1,268 @@
+/*
+----------------------------------------
+Tantek Celik's Whitepsace Reset
+     Author:  	Tantek Celik, Shane Riley
+    Version:  	(CC) 2010 Some Rights Reserved - http://creativecommons.org/licenses/by/2.0
+Description:	Resets default styling of common browsers to a common base
+----------------------------------------
+*/
+
+ul,ol {
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,pre,code {
+  font-size: 1em;
+}
+
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input,dl,dt,dd, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+a img,:link img,:visited img, fieldset {
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+header, section, article, nav, footer, hgroup, details, summary, figure, main {
+  display: block;
+}
+
+mark {
+  color: inherit;
+  background: transparent;
+}
+
+abbr {
+  border: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+body {
+  background: #C1D8C3;
+}
+
+header {
+  text-align: center;
+  background-color: #CD5C08;
+  color: #f3f1ec;
+  height: 100px;
+  align-content: center;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+
+.home {
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-top: #6A9C89 2px solid;
+}
+
+#editId {
+  display: none;
+}
+
+main {
+  text-align: center;
+}
+
+#listOfContacts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.contact {
+  background: #FFF5E4;
+  width: 200px;
+  height: 250px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.095);
+  color: #0c1c16;
+}
+
+h3 {
+  background-color: #CD5C08;
+  color: #FFF5E4;
+  padding: 10px;
+}
+
+.contact p {
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  background: #CD5C08;
+  color: #f3f1ec;
+}
+
+nav>span {
+  border: 2px #6A9C89 solid;
+  border-left: 0px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  align-content: center;
+}
+
+nav>span:first-of-type {
+  border-left: 2px;
+}
+
+#search {
+  padding-left: 10px;
+}
+
+#contactButtons {
+  display: flex;
+}
+
+#contactButtons button {
+  background-color: #CD5C08;
+  color: #f3f1ec;
+  width: 100px;
+  border: none;
+  border-top: 1px solid #6A9C89;
+  height: 25px;
+}
+
+#contactButtons button:first-of-type {
+  border-right: 1px solid #6A9C89;
+}
+
+#contactButtons::before {
+  content: "";
+}
+
+#contactButtons::after {
+  content: "";
+}
+
+.cardTitle {
+  font-weight: 600;
+  background-color: #fef0d8;
+  ;
+padding: 8px 0px;
+}
+
+#tagSeachButtons {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+#tagSeachButtons li {
+  background: #CD5C08;
+  border: 2px #6A9C89 solid;
+  border-left: 0px;
+  padding: 10px;
+  width: 100%;
+  color: #f3f1ec;
+}
+
+#tagSeachButtons>li:first-of-type {
+  background: #f3f1ec;
+  color: #CD5C08;
+  border-left: 2px;
+}
+
+#tagSeachButtons::before {
+  content: "";
+}
+
+#tagSeachButtons::after {
+  content: "";
+}
+
+#addContactForm, #tagForm, #contactEditForm {
+  display: grid;
+  columns: 2;
+  width: 400px;
+  margin: auto;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#addContactForm input, #tagForm input,#contactEditForm input {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 2px 2px 2px 10px;
+}
+
+#addContactForm button, #tagForm button, #contactEditForm button {
+  background: #CD5C08;
+  border: 2px  #C1D8C3 solid;
+  color: #f3f1ec;
+  padding: 5px;
+}
+
+#tagForm input {
+  margin-bottom: 0px;
+}
+
+#tagForm h2 {
+  padding: 5px 0px;
+}
+
+select {
+  line-height: initial;
+  outline: #0c1c16 2px;
+}
+
+select option {
+  padding: 5px;
+  align-content: center;
+}
+
+select option:hover {
+  background-color: #C1D8C3;
+}
+
+select option:checked {
+  background-color: #527165;
+  color: #ffffff;
+}
+
+.incorrect {
+  text-decoration: underline red;
+  background-color: rgb(247, 214, 214);
+}
+
+.example {
+  float: right;
+  color: #8f8f8f;
+}
+
+#areYouSure {
+  background: white;
+  outline: solid black 2px;
+  height: 100px;
+  left: 50%;
+  margin: 0 0 0 -200px;
+  position: absolute;
+  top: 100px;
+  width: 400px;
+  z-index: 2;
+  padding-top: 20px;
+  text-align: center;
+  display: none;
+}
+
+#areYouSure button {
+  display: inline-block;
+  margin-top: 20px;
+  width: 50%;
+}

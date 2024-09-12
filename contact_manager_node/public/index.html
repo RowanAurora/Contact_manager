@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script type="module" src="/javascripts/main.js"></script>
+  <link rel="stylesheet" href="/stylesheets/contact.css">
+</head>
+<body>
+  <div id="areYouSure">
+    <h2>Are You Sure?</h2>
+    <button id="yesSure">Yes</button><button id="noSure">No</button>
+  </div>
+
+  <header>
+    <h1>Rowan's Contact Manager</h1>
+    <p>Practice Project 239</p>
+    <p class="home cancel">Home</p>
+  </header>
+
+  <nav>
+    <span class="addContact">Add Contact</span>
+    <span class="addTag">Add Tag</span>
+    <span><input placeholder="Search Name" id='search' type="text"></span>
+  </nav>
+
+  <main></main>
+
+  <!-- handlerbars template for contact card field -->
+  <script id="contactPage" type="text/x-handlebars">
+    <div id='listOfContacts'>
+    {{#each contact}}
+      {{> contactCard}}
+    {{/each}}
+    </div>
+  </script>
+
+  <!-- handlerbars partial template for contact card -->
+  <script id="contactCard" type="text/x-handlebars">
+    <div class='contact' value={{id}}>
+      <h3>{{full_name}}</h3>
+      <p class='cardTitle'>Phone Number</p>
+      <p>{{phone_number}}</p>
+      <p class='cardTitle'>Email:</p>
+      <p>{{email}}</p>
+      {{#if tags}}
+      <p class='cardTitle'>Tags:</p>
+      <p>{{tags}}</p>
+      {{/if}}
+      <div id=contactButtons>
+        <button class='editContactCard'>Edit</button>
+        <button class='delete' value={{id}}>Delete</button>
+      </div>
+    </div>
+  </script>
+
+  <!-- hanldebars template for blank page with no contacts.  -->
+   <script id="noContacts" type="text/x-handlebars">
+     <div>
+        <h2 id='noContactText'>There are no contacts</h2>
+        <button class="addContact">Add Contact</button>
+      </div>
+    </script>
+
+
+  <!-- Add Contact Form -->
+  <script id="addContact" type="text/x-handlebars">
+   <div>
+     <form id='addContactForm' novalidate action="">
+      <h2>Create Contact</h2>
+      <label for="name">Full Name:<p class='example'>Pete Hanson</p></label>
+      <input type="text" name='full_name' id='full_name'>
+      <label for="email">Email adress:<p class='example'>email@example.com</p></label>
+      <input type="email" name='email' id='email'>
+      <label for="phone">Telephone number:  <p class='example'>123-456-7890</p></label>
+      <input type="text" name='phone_number' id='phone_number'>
+      <label for="Tags">Tags:
+      </label>
+      <select name='tags' id='tagSelect' multiple>
+        {{> tagListPartial}}
+      </select>
+      <button type="submit">Submit</button>
+      <button class='cancel'>Cancel</button>
+    </form>
+   </div>
+  </script>
+
+  <!-- edit contact form-->
+  <script id="editContact" type="text/x-handlebars">
+   <div>
+     <form id='contactEditForm' novalidate method="PUT">
+      <h2>Edit Contact</h2>
+      <div id='editId'></div>
+      <label for="editName">Full Name: <p class='example'>Pete Hanson</p></label>
+        <input id='full_name' placeholder="" name="full_name" type="text">
+      <label for="editEmail">Email adress: <p class='example'>email@example.com</p></label>
+        <input id="email" name="email" type="email">
+      <label for="editPhone">Telephone number: <p class='example'>(123)-456-7890</p></label>
+        <input id="phone_number" name="phone_number" type="text">
+      <label for="Tags">Tags:</label>
+      <select name='tags' id='tagSelect' multiple>
+        {{> tagListPartial}}
+      </select>
+      <button type="submit" id='submitEdit'>Submit</span>
+      <button class='cancel'>Cancel</button>
+    </form>
+   </div>
+  </script>
+
+  <!-- add tag -->
+  <script id="createTag" type="text/x-handlebars">
+    <div id='tagForm'>
+      <h2>Create Tag</h2>
+      <input type="text" name="tag" id="tag">
+      <button id='submitTag'>Add Tag To List</button>
+      <button class='cancel'>Cancel</button>
+    </div>
+  </script>
+
+  <!-- partial for listing tags -->
+  <script id="tagListPartial" type="text/x-handlebars">
+    {{#each tag}}
+      <option value={{this}}>{{this}}</option>
+    {{/each}}
+  </script>
+
+  <!-- sort by tag buttons -->
+  <script id="tagButtonTemplate" type="text/x-handlebars">
+    <ul id='tagSeachButtons'>
+      <li>Clear</li>
+      {{#each this}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </script>
+</body>
+</html>
