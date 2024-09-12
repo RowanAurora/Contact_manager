@@ -51,7 +51,7 @@ body {
 
 header {
   text-align: center;
-  background-color: #CD5C08;
+  background-color: #BF5708;
   color: #f3f1ec;
   height: 100px;
   align-content: center;
@@ -94,7 +94,7 @@ main {
 }
 
 h3 {
-  background-color: #CD5C08;
+  background-color: #BF5708;
   color: #FFF5E4;
   padding: 10px;
 }
@@ -105,8 +105,8 @@ h3 {
 
 nav {
   display: flex;
-  background: #CD5C08;
-  color: #f3f1ec;
+  background: #BF5708;
+  color: #ffffff;
 }
 
 nav>span {
@@ -131,8 +131,8 @@ nav>span:first-of-type {
 }
 
 #contactButtons button {
-  background-color: #CD5C08;
-  color: #f3f1ec;
+  background-color: #BF5708;
+  color: #ffffff;
   width: 100px;
   border: none;
   border-top: 1px solid #6A9C89;
@@ -154,8 +154,7 @@ nav>span:first-of-type {
 .cardTitle {
   font-weight: 600;
   background-color: #fef0d8;
-  ;
-padding: 8px 0px;
+  padding: 8px 0px;
 }
 
 #tagSeachButtons {
@@ -165,17 +164,17 @@ padding: 8px 0px;
 }
 
 #tagSeachButtons li {
-  background: #CD5C08;
+  background: #BF5708;
   border: 2px #6A9C89 solid;
   border-left: 0px;
   padding: 10px;
   width: 100%;
-  color: #f3f1ec;
+  color: #ffffff;
 }
 
 #tagSeachButtons>li:first-of-type {
-  background: #f3f1ec;
-  color: #CD5C08;
+  background: #ffffff;
+  color: #BF5708;
   border-left: 2px;
 }
 
@@ -203,9 +202,9 @@ padding: 8px 0px;
 }
 
 #addContactForm button, #tagForm button, #contactEditForm button {
-  background: #CD5C08;
+  background: #BF5708;
   border: 2px  #C1D8C3 solid;
-  color: #f3f1ec;
+  color: #ffffff;
   padding: 5px;
 }
 
