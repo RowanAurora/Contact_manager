@@ -10,7 +10,14 @@
     "full_name": "Pete Hanson",
     "phone_number": "123 456 7890",
     "email": "phanson@ls.com",
-    "tags": "Work,Friends,Me",
+    "tags": "Work",
     "id": 2
+  },
+  {
+    "full_name": "Chris Lee",
+    "phone_number": "344 888 9843",
+    "email": "C_Lee@ls.com",
+    "tags": "Work",
+    "id": 3
   }
 ]

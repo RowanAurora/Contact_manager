@@ -87,7 +87,5 @@ export class APICaller {
           alert('error editing contact');
         }
       });
-
-    // $('main').empty();
   }
 }
